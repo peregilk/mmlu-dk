@@ -27,6 +27,9 @@ Result:
 
 
 # Comparisions
+The `mmlu_comparisons_deepinfra.py`is run by the command `bash run_comparisons.sh`.
+
+After that we can run `python stats_comparisons.py
 
 
 # Not really working yet....
