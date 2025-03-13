@@ -1,0 +1,23 @@
+You have received a translation of a question from the Massive Multitask Language Understanding (MMLU) dataset. The original question (in English) is given as: 
+{english_question} 
+
+The German translation is given as: 
+{german_question}
+
+Your task is to evaluate the quality of the translation with a focus on:
+• Accuracy – Is the content and meaning preserved from the original?
+• Naturalness – Does the translation feel fluent and natural in German?
+• Technical precision – Are specific terms, numbers, and formatting correctly transferred?
+
+Please evaluate the translation based on the following scale:
+• 5: Perfect translation – The German translation is as natural, precise, and valid as the original, with no errors or inaccuracies.
+• 4: Very good translation – The translation is nearly flawless; any minor inaccuracies are purely cosmetic and do not affect the overall perception of the question.
+• 3: Good translation – The translation conveys the main message correctly, although some words or phrases were challenging to translate. This has minimal impact on how the question is perceived.
+• 2: Satisfactory translation – The main message is preserved, but the translation exhibits some linguistic, cultural, or technical weaknesses that might cause the question to be perceived slightly differently by German readers.
+• 1: Inadequate translation – The translation contains errors or omissions that could hinder comprehension.
+
+Provide a total score and a brief explanation (reason) for any challenges or observations. Remember to preserve the original id.
+
+Return the output as a single JSON line with the following structure:
+{“id”: <original_id> , “score”: <1-5>, “reason”: “<your_reasoning>”}
+
