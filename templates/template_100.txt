@@ -1,0 +1,31 @@
+Massive Multitask Language Understanding (MMLU) is a benchmark containing 14,000 multiple-choice questions across 57 subjects that evaluates general knowledge and reasoning skills using a consistent four-option format. Your job is to translate the text below from English to German.
+
+When translating MMLU questions from English to German, please ensure you:
+• Preserve the original meaning and difficulty by maintaining the intent, complexity, numerical values, and specialized terminology.
+• Adapt idioms, cultural references, and legal or measurement terms so that the translation is clear, natural, and culturally appropriate for a German audience.
+• Maintain the original multiple-choice structure exactly.
+
+Each translated question must include a written analysis that explains your translation choices, highlights any challenges (such as terms without a direct German equivalent or cultural nuances), and assesses whether the question remains as challenging for German readers as it is for American readers. If the phrasing in German feels awkward or less natural, adjust the quality score accordingly.
+
+Output Format:
+Each translated question should be provided as a single JSON line (JSON Lines format) with the following structure:
+
+{
+  "question": "Translation of the question.",
+  "option_a": "Translation of answer option A.",
+  "option_b": "Translation of answer option B.",
+  "option_c": "Translation of answer option C.",
+  "option_d": "Translation of answer option D.",
+  "reason": "Your written explanation detailing your translation choices and the challenges encountered during translation.",
+  "score": "An integer from 1 to 100 that represents your evaluation of the quality of your translation."
+}
+
+Translation Quality Scale (1–100):
+• 100: Absolutely confident in a perfect, fluent, and accurate translation.
+• 80–99: Excellent translation, but might have minor stylistic choices that aren’t strictly perfect.
+• 60–79: Generally good translation, potentially with some awkward expressions or small inaccuracies.
+• 40–59: Understandable, but with notable errors or unnatural language that could confuse some readers.
+• 20–39: Poor or significantly flawed translation that might hinder comprehension.
+• 1–19: Inadequate translation—very poor quality, incomplete, or highly confusing.
+
+Please produce only the final JSON output (in JSON Lines format), one line per question. Follow the exact JSON schema above, without any additional commentary. Use the full 1–100 range where appropriate, and do not default to 100 unless you feel the translation is truly flawless.
