@@ -25,7 +25,7 @@ Result:
 | Qwen2.5-72B-Instruct | 1000 | 0 | 1 | 4 | 112 | 883 | 4.88 |
 
 
-``bash
+```bash
 python mmlu_translate_deepinfra.py --max_items 1000 --input_file mmlu_download/Global-MMLU_test_en.jsonl --output_file translations_100/DeepSeek-V3.jsonl --template_file templates/template_100.txt --model deepseek-ai/DeepSeek-V3
 
 python mmlu_translate_deepinfra.py --max_items 1000 --input_file mmlu_download/Global-MMLU_test_en.jsonl --output_file translations_100/Qwen2.5-72B-Instruct.jsonl --template_file templates/template_100.txt --model Qwen/Qwen2.5-72B-Instruct
