@@ -40,6 +40,8 @@ python mmlu_translate_deepinfra.py --max_items 1000 --input_file mmlu_download/G
 
 ````
 Result:
+| Filename | N | 1 | 2 | 3 | 4 | 5 | Mean Score |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | DeepSeek-V3 | 1000 | 0 | 0 | 0 | 99 | 901 | 4.90 |
 | Llama-3.2-1B-Instruct | 997 | 31 | 187 | 253 | 478 | 48 | 3.33 |
 | Meta-Llama-3.1-405B-Instruct | 1000 | 0 | 0 | 2 | 595 | 403 | 4.40 |
