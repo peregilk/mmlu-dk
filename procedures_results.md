@@ -57,13 +57,14 @@ After that we can run `python stats_comparisons.py`
 
 It produces these results:
 ### Translation Quality Table
-|                                 |   DeepSeek-V3 |   Meta-Llama-3.1-405B-Instruct |   Meta-Llama-3.1-8B-Instruct |   Mistral-Small-24B-Instruct-2501 |   Qwen2.5-72B-Instruct |
-|:--------------------------------|--------------:|-------------------------------:|-----------------------------:|----------------------------------:|-----------------------:|
-| DeepSeek-V3                     |          4.93 |                           4.97 |                         4.13 |                              4.7  |                   4.79 |
-| Meta-Llama-3.1-405B-Instruct    |          4.88 |                           4.98 |                         4.12 |                              4.64 |                   4.75 |
-| Meta-Llama-3.1-8B-Instruct      |          4.22 |                           4.71 |                         4.11 |                              4.12 |                   4.35 |
-| Mistral-Small-24B-Instruct-2501 |          4.4  |                           4.75 |                         4.06 |                              4.29 |                   4.41 |
-| Qwen2.5-72B-Instruct            |          4.54 |                           4.86 |                         4.15 |                              4.41 |                   4.53 |
+|                                 |   DeepSeek-V3 |   Llama-3.2-1B-Instruct | Meta-Llama-3.1-405B-Instruct   |   Meta-Llama-3.1-8B-Instruct |   Mistral-Small-24B-Instruct-2501 |   Qwen2.5-72B-Instruct |
+|:--------------------------------|--------------:|------------------------:|:-------------------------------|-----------------------------:|----------------------------------:|-----------------------:|
+| DeepSeek-V3                     |          4.93 |                  nan    | 4.97                           |                         4.13 |                              4.7  |                   4.79 |
+| Llama-3.2-1B-Instruct           |          2.44 |                    3.35 | N/A                            |                         3.55 |                              2.22 |                   2.51 |
+| Meta-Llama-3.1-405B-Instruct    |          4.88 |                  nan    | 4.98                           |                         4.12 |                              4.64 |                   4.75 |
+| Meta-Llama-3.1-8B-Instruct      |          4.22 |                  nan    | 4.71                           |                         4.11 |                              4.12 |                   4.35 |
+| Mistral-Small-24B-Instruct-2501 |          4.4  |                  nan    | 4.75                           |                         4.06 |                              4.29 |                   4.41 |
+| Qwen2.5-72B-Instruct            |          4.54 |                  nan    | 4.86                           |                         4.15 |                              4.41 |                   4.53 |
 
 ### Average Performance Translations
 |                                 |   Average Translation Score (Excl. Self) |   Average Translation Score (Incl. Self) |
@@ -73,15 +74,17 @@ It produces these results:
 | Qwen2.5-72B-Instruct            |                                     4.49 |                                     4.5  |
 | Mistral-Small-24B-Instruct-2501 |                                     4.4  |                                     4.38 |
 | Meta-Llama-3.1-8B-Instruct      |                                     4.35 |                                     4.3  |
+| Llama-3.2-1B-Instruct           |                                     2.68 |                                     2.81 |
 
 ### Strictness in Evaluating Translations
 |                                 |   Evaluation Strictness |
 |:--------------------------------|------------------------:|
-| Meta-Llama-3.1-8B-Instruct      |                    4.12 |
-| Mistral-Small-24B-Instruct-2501 |                    4.47 |
-| DeepSeek-V3                     |                    4.51 |
-| Qwen2.5-72B-Instruct            |                    4.57 |
+| Meta-Llama-3.1-8B-Instruct      |                    4    |
+| Mistral-Small-24B-Instruct-2501 |                    4.02 |
+| DeepSeek-V3                     |                    4.1  |
+| Qwen2.5-72B-Instruct            |                    4.16 |
 | Meta-Llama-3.1-405B-Instruct    |                    4.82 |
+| Llama-3.2-1B-Instruct           |                  nan    |
 
 
 
