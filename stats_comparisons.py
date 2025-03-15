@@ -8,7 +8,6 @@ import numpy as np
 def process_files(input_directory, output_file=None):
     # Extract models from filenames
     files = [f for f in os.listdir(input_directory) if f.startswith("comparison_") and f.endswith(".jsonl")]
-    
     # Create a dictionary to store scores
     data = defaultdict(lambda: defaultdict(list))
     

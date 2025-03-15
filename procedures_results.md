@@ -14,16 +14,38 @@ python mmlu_translate_deepinfra.py --max_items 1000 --input_file mmlu_download/G
 python mmlu_translate_deepinfra.py --max_items 1000 --input_file mmlu_download/Global-MMLU_test_en.jsonl --output_file translations/Qwen2.5-72B-Instruct.jsonl --template_file templates/template.txt --model Qwen/Qwen2.5-72B-Instruct
 python mmlu_translate_deepinfra.py --max_items 1000 --input_file mmlu_download/Global-MMLU_test_en.jsonl --output_file translations/Mistral-Small-24B-Instruct-2501.jsonl --template_file templates/template.txt --model mistralai/Mistral-Small-24B-Instruct-2501
 python mmlu_translate_deepinfra.py --max_items 1000 --input_file mmlu_download/Global-MMLU_test_en.jsonl --output_file translations/Meta-Llama-3.1-8B-Instruct.jsonl --template_file templates/template.txt --model meta-llama/Meta-Llama-3.1-8B-Instruct
+python mmlu_translate_deepinfra.py --max_items 1000 --input_file mmlu_download/Global-MMLU_test_en.jsonl --output_file translations/Llama-3.2-1B-Instruct.jsonl --template_file templates/template.txt --model meta-llama/Llama-3.2-1B-Instruct
+
 ````
 Result:
 | Filename | N | 1 | 2 | 3 | 4 | 5 | Mean Score |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | DeepSeek-V3 | 1000 | 0 | 0 | 1 | 16 | 983 | 4.98 |
+| Llama-3.2-1B-Instruct | 1000 | 74 | 237 | 248 | 403 | 38 | 3.09 |
 | Meta-Llama-3.1-405B-Instruct | 1000 | 0 | 0 | 0 | 133 | 867 | 4.87 |
 | Meta-Llama-3.1-8B-Instruct | 1000 | 0 | 0 | 79 | 358 | 563 | 4.48 |
 | Mistral-Small-24B-Instruct-2501 | 1000 | 1 | 10 | 65 | 285 | 639 | 4.55 |
 | Qwen2.5-72B-Instruct | 1000 | 0 | 1 | 4 | 112 | 883 | 4.88 |
 
+
+# Translation Performance
+
+```bash
+python mmlu_translate_deepinfra.py --max_items 1000 --input_file mmlu_download/Global-MMLU_test_en.jsonl --output_file translations_performance/DeepSeek-V3.jsonl --template_file templates/template_performance.txt --model deepseek-ai/DeepSeek-V3
+python mmlu_translate_deepinfra.py --max_items 1000 --input_file mmlu_download/Global-MMLU_test_en.jsonl --output_file translations_performance/Meta-Llama-3.1-405B-Instruct.jsonl --template_file templates/template_performance.txt --model meta-llama/Meta-Llama-3.1-405B-Instruct
+python mmlu_translate_deepinfra.py --max_items 1000 --input_file mmlu_download/Global-MMLU_test_en.jsonl --output_file translations_performance/Qwen2.5-72B-Instruct.jsonl --template_file templates/template_performance.txt --model Qwen/Qwen2.5-72B-Instruct
+python mmlu_translate_deepinfra.py --max_items 1000 --input_file mmlu_download/Global-MMLU_test_en.jsonl --output_file translations_performance/Mistral-Small-24B-Instruct-2501.jsonl --template_file templates/template_performance.txt --model mistralai/Mistral-Small-24B-Instruct-2501
+python mmlu_translate_deepinfra.py --max_items 1000 --input_file mmlu_download/Global-MMLU_test_en.jsonl --output_file translations_performance/Meta-Llama-3.1-8B-Instruct.jsonl --template_file templates/template_performance.txt --model meta-llama/Meta-Llama-3.1-8B-Instruct
+python mmlu_translate_deepinfra.py --max_items 1000 --input_file mmlu_download/Global-MMLU_test_en.jsonl --output_file translations_performance/Llama-3.2-1B-Instruct.jsonl --template_file templates/template_performance.txt --model meta-llama/Llama-3.2-1B-Instruct
+
+````
+Result:
+| DeepSeek-V3 | 1000 | 0 | 0 | 0 | 99 | 901 | 4.90 |
+| Llama-3.2-1B-Instruct | 997 | 31 | 187 | 253 | 478 | 48 | 3.33 |
+| Meta-Llama-3.1-405B-Instruct | 1000 | 0 | 0 | 2 | 595 | 403 | 4.40 |
+| Meta-Llama-3.1-8B-Instruct | 1000 | 0 | 3 | 156 | 577 | 264 | 4.10 |
+| Mistral-Small-24B-Instruct-2501 | 1000 | 0 | 4 | 62 | 515 | 419 | 4.35 |
+| Qwen2.5-72B-Instruct | 1000 | 0 | 1 | 8 | 506 | 485 | 4.47 |
 
 
 # Comparisions

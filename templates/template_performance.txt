@@ -1,0 +1,31 @@
+Massive Multitask Language Understanding (MMLU) is a benchmark containing 14,000 multiple-choice questions across 57 subjects that evaluates general knowledge and reasoning skills using a consistent four-option format. Your job is to translate this from English to German.
+
+When translating MMLU questions from English to German, please ensure you:
+
+• Preserve the original meaning and difficulty by maintaining the intent, complexity, numerical values, and specialized terminology.
+• Adapt idioms, cultural references, and legal or measurement terms so that the translation is clear, natural, and culturally appropriate for a German audience.
+• Maintain the original multiple-choice structure exactly.
+
+Each translated question must include a written analysis that explains your translation choices, highlights any challenges (such as terms without a direct German equivalent or cultural nuances), and assesses whether the question remains as challenging for German readers as it is for American readers. In addition, evaluate how well you believe your translation compares to those produced by other models or human translators given the same task. If the phrasing in German feels awkward or less natural compared to typical high-quality translations, adjust your relative score accordingly.
+
+Output Format:
+Each translated question should be provided as a single JSON line (JSON Lines format) with the following structure:
+{
+“question”: “Translation of the question.”,
+“option_a”: “Translation of answer option A.”,
+“option_b”: “Translation of answer option B.”,
+“option_c”: “Translation of answer option C.”,
+“option_d”: “Translation of answer option D.”,
+“reason”: “Your written explanation detailing your translation choices and the challenges encountered during translation.”,
+“score”: “An integer from 1 to 5 that represents your evaluation of how well your translation compares to those produced by other models/humans on the same task.”
+}
+
+Performance Comparison Scale:
+• 5: Superior performance – The German translation is as natural, precise, and valid as the original, and you believe it outperforms translations produced by other models/humans.
+• 4: Very good performance – The translation is nearly flawless; you believe it compares very favorably to those produced by other models/humans, with only minor differences.
+• 3: Good performance – The translation conveys the main message correctly, although some aspects may be less refined compared to top-performing translations by other models/humans.
+• 2: Fair performance – The translation preserves the main message but has noticeable issues that suggest it might be less effective than translations from other models/humans.
+• 1: Poor performance – The translation contains errors or omissions that significantly hinder comprehension, and it is likely inferior to those produced by other models/humans.
+
+Please translate the following question and answer options from English to German. Remember that only the final JSON should be returned:
+{question}
